@@ -61,6 +61,8 @@ public class SecondaryController1 {
     @FXML
     private ImageView ramPNG;
     
+    @FXML
+    private TextField scheduleInput;
    
 
     @FXML
@@ -71,7 +73,9 @@ public class SecondaryController1 {
     @FXML
     private void writeToTxt(ActionEvent event) throws IOException {
         StringBuilder sb = new StringBuilder();
-        sb.append(createFirstName.getText().toString()+ "\n");
+        sb.append(createFirstName.getText().toString()+ " " 
+                + createLastName.getText().toString() + "\n");
+        
         
         File file =new File("./src/main/java/Data/login.txt");
         FileWriter W = new FileWriter(file,true);
@@ -81,6 +85,20 @@ public class SecondaryController1 {
         W.close();
         
         //Platform.exit();//closes window
+    }
+    
+    private void writeSchedule(ActionEvent event) throws IOException {
+        StringBuilder sb = new StringBuilder();
+        sb.append(scheduleInput.getText().toString() + "\n");
+        File userSchedules = new File("./src/main/java/Data/Schedules.txt");
+        FileWriter w = new FileWriter(userSchedules, true);
+        Scanner S = new Scanner(userSchedules);
+        
+        w.write(sb.toString());
+        w.close();
+        
+        
+       
     }
 
 

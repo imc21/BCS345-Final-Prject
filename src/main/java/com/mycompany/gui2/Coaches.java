@@ -25,7 +25,7 @@ public class Coaches
             JSONArray coachList = (JSONArray) obj;
             System.out.println(coachList);
              
-            //Iterate over employee array
+            //Iterate over coach array
             coachList.forEach( emp -> parseCoachesObject( (JSONObject) emp ) );
  
         } catch (FileNotFoundException e) {
@@ -39,3 +39,5 @@ public class Coaches
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
+
+

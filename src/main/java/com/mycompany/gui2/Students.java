@@ -26,7 +26,7 @@ public class Students
             JSONArray studentList = (JSONArray) obj;
             System.out.println(studentList);
              
-            //Iterate over employee array
+            //Iterate over student array
             studentList.forEach( emp -> parseStudentObject( (JSONObject) emp ) );
  
         } catch (FileNotFoundException e) {
