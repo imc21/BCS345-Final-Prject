@@ -12,18 +12,9 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-/*
-* The coachSignIn class is used to inlcude textfileds that consits of 
-* sign up, the first and last name, username, password as well as the check boxes
-* of different functions for the coaches to sign up.
-* @version 12.4
-* @since 2021
-*/
-
-
 public class coachSignIn {
 
-    //Creating private textfields, buttons and checkboxes.
+    
     @FXML
     private TextField signUpDayFieldCoach;
     @FXML
@@ -71,7 +62,7 @@ public class coachSignIn {
 
     @FXML
     private void writeToTxt(ActionEvent event) {
-    }// writes the files to the textfile
+    }
 
     
 

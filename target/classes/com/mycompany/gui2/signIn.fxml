@@ -2,8 +2,8 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -24,158 +24,12 @@
                      <children>
                         <VBox alignment="CENTER">
                            <children>
-                              <Label text="Select all time slots that you are available for" />
-                              <Label text="this semester" />
-                              <Label text="Please enter availability for each day Monday-Saturday" />
-                              <TextField fx:id="signUpDayFieldCoach" promptText="Enter a day of the week" />
+                              <Label text="Please Type In all Days and Times you are " />
+                              <Label text="Available for this semester" />
+                              <Label text="Use the format Month/Day Time:Time " />
                            </children>
                         </VBox>
-                        <Label text="(By default, time slots are set to unavailable)" />
-                        <HBox alignment="CENTER" prefHeight="8.0" prefWidth="736.0" spacing="20.0">
-                           <children>
-                              <VBox prefHeight="200.0" prefWidth="100.0">
-                                 <children>
-                                    <Label text="9:00-10:00am" />
-                                 </children>
-                              </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0">
-                                 <children>
-                                    <CheckBox fx:id="signUpCheck1" mnemonicParsing="false" text="Im Available" />
-                                 </children>
-                              </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0">
-                                 <children>
-                                    <Label text="10:00-11:00am" />
-                                 </children>
-                              </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0">
-                                 <children>
-                                    <CheckBox fx:id="signUpCheck2" mnemonicParsing="false" text="Im Available" />
-                                 </children>
-                              </VBox>
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="8.0" prefWidth="736.0" spacing="20.0">
-                           <children>
-                              <VBox prefHeight="200.0" prefWidth="100.0">
-                                 <children>
-                                    <Label text="11:00-12:00Pm" />
-                                 </children>
-                              </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0">
-                                 <children>
-                                    <CheckBox fx:id="signUpCheck3" mnemonicParsing="false" text="Im Available" />
-                                 </children>
-                              </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0">
-                                 <children>
-                                    <Label text="12:00-1:00pm" />
-                                 </children>
-                              </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0">
-                                 <children>
-                                    <CheckBox fx:id="signUpCheck4" mnemonicParsing="false" text="Im Available" />
-                                 </children>
-                              </VBox>
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="8.0" prefWidth="736.0" spacing="20.0">
-                           <children>
-                              <VBox prefHeight="200.0" prefWidth="100.0">
-                                 <children>
-                                    <Label text="1:00-2:00pm" />
-                                 </children>
-                              </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0">
-                                 <children>
-                                    <CheckBox fx:id="signUpCheck5" mnemonicParsing="false" text="Im Available" />
-                                 </children>
-                              </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0">
-                                 <children>
-                                    <Label text="2:00-3:00pm" />
-                                 </children>
-                              </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0">
-                                 <children>
-                                    <CheckBox fx:id="signUpCheck6" mnemonicParsing="false" text="Im Available" />
-                                 </children>
-                              </VBox>
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="8.0" prefWidth="736.0" spacing="20.0">
-                           <children>
-                              <VBox prefHeight="200.0" prefWidth="100.0">
-                                 <children>
-                                    <Label text="3:00-4:00pm" />
-                                 </children>
-                              </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0">
-                                 <children>
-                                    <CheckBox fx:id="signUpCheck7" mnemonicParsing="false" text="Im Available" />
-                                 </children>
-                              </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0">
-                                 <children>
-                                    <Label text="4:00-5:00pm" />
-                                 </children>
-                              </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0">
-                                 <children>
-                                    <CheckBox fx:id="signUpCheck8" mnemonicParsing="false" text="Im Available" />
-                                 </children>
-                              </VBox>
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="8.0" prefWidth="736.0" spacing="20.0">
-                           <children>
-                              <VBox prefHeight="200.0" prefWidth="100.0">
-                                 <children>
-                                    <Label text="5:00-6:00pm" />
-                                 </children>
-                              </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0">
-                                 <children>
-                                    <CheckBox fx:id="signUpCheck9" mnemonicParsing="false" text="Im Available" />
-                                 </children>
-                              </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0">
-                                 <children>
-                                    <Label text="6:00-7:00pm" />
-                                 </children>
-                              </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0">
-                                 <children>
-                                    <CheckBox fx:id="signUpCheck10" mnemonicParsing="false" text="Im Available" />
-                                 </children>
-                              </VBox>
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="8.0" prefWidth="736.0" spacing="20.0">
-                           <children>
-                              <VBox prefHeight="200.0" prefWidth="100.0">
-                                 <children>
-                                    <Label text="7:00-8:00pm" />
-                                 </children>
-                              </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0">
-                                 <children>
-                                    <CheckBox fx:id="signUpCheck11" mnemonicParsing="false" text="Im Available" />
-                                 </children>
-                              </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0">
-                                 <children>
-                                    <Label text="8:00-9:00pm" />
-                                 </children>
-                              </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0">
-                                 <children>
-                                    <CheckBox fx:id="signUpCheck12" mnemonicParsing="false" text="Im Available" />
-                                 </children>
-                              </VBox>
-                           </children>
-                        </HBox>
-                        <Button fx:id="signUpConfirmButton" mnemonicParsing="false" onAction="#switchToSecondary" text="Confirm " />
+                        <TextArea fx:id="scheduleInput" minHeight="-Infinity" prefHeight="203.0" prefWidth="487.0" />
                         <ImageView fx:id="ramPNG" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="file:/E:/BCS%20345/Codes%20for%20BCS%20345/GUI2/src/main/java/Images/FSC_Logo_1.png" />
@@ -188,7 +42,7 @@
                           <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                       </padding>
                      <children>
-                          <Label text="Sign up" />
+                          <Label text="Type Your Information" />
                         <HBox alignment="CENTER" prefHeight="16.0" prefWidth="736.0" spacing="20.0">
                            <children>
                               <VBox prefHeight="200.0" prefWidth="100.0">
@@ -240,35 +94,7 @@
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0">
                                  <children>
-                                    <TextField fx:id="createUserName" prefWidth="172.0" />
-                                 </children>
-                              </VBox>
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="1.0" prefWidth="736.0" spacing="20.0">
-                           <children>
-                              <VBox prefHeight="9.0" prefWidth="100.0">
-                                 <children>
-                                    <Label text="Password" />
-                                 </children>
-                              </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0">
-                                 <children>
-                                    <TextField fx:id="createPassword" />
-                                 </children>
-                              </VBox>
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="15.0" prefWidth="736.0" spacing="20.0">
-                           <children>
-                              <VBox prefHeight="200.0" prefWidth="100.0">
-                                 <children>
-                                    <Label text="Confirm Password" />
-                                 </children>
-                              </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0">
-                                 <children>
-                                    <TextField fx:id="createPassword2" />
+                                    <TextField fx:id="createEmailUserName" prefWidth="172.0" />
                                  </children>
                               </VBox>
                            </children>
@@ -290,7 +116,7 @@
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="3.0" prefWidth="736.0">
                            <children>
-                                <Button fx:id="createAccountButton" onAction="#writeToTxt" text="Sign up">
+                                <Button fx:id="createAccountButton" onAction="#writeToTxt" text="Submit ">
                                  <HBox.margin>
                                     <Insets bottom="20.0" />
                                  </HBox.margin>

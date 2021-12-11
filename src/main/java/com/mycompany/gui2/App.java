@@ -8,11 +8,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-/*
- * JavaFX creates an application thread for running the application start method, 
- * processing input events, and running animation timelines. 
- * Creation of JavaFX Scene and Stage objects as well as modification of scene graph operations to 
- * live objects (those objects already attached to a scene) must be done on the JavaFX application thread.
+/**
+ * JavaFX App
  */
 public class App extends Application {
 
@@ -20,7 +17,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("primary"), 1000, 600);
+        scene = new Scene(loadFXML("signIn"), 1000, 600);
         stage.setScene(scene);
         stage.show();
     }
@@ -33,11 +30,6 @@ public class App extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
         return fxmlLoader.load();
     }
-    /*
-    *The Java launcher loads and initializes the specified Application class on the JavaFX Application Thread. 
-    *If there is no main method in the Application class, or if the main method calls Application.launch(),
-    *then an instance of the Application is then constructed on the JavaFX Application Thread.
-    */
 
     public static void main(String[] args) {
         launch();

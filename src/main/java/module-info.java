@@ -1,4 +1,4 @@
-module com.mycompany.gui {
+module com.mycompany.gui2 {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.base;

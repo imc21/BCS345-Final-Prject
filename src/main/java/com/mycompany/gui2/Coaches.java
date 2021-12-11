@@ -8,14 +8,6 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-/*
-* The Coaches class will read the json textfile 
-*The textfile will consist of teams and the names of the team members
-* There will be a try catch filenotfound exception method.
-* @author Amoon, Caleb, Matt, Brett
-* @version 12.4
-* @since 2021
-*/
  
 public class Coaches 
 {
@@ -33,7 +25,7 @@ public class Coaches
             JSONArray coachList = (JSONArray) obj;
             System.out.println(coachList);
              
-            //Iterate over coach array
+            //Iterate over employee array
             coachList.forEach( emp -> parseCoachesObject( (JSONObject) emp ) );
  
         } catch (FileNotFoundException e) {
@@ -47,5 +39,3 @@ public class Coaches
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
-
-

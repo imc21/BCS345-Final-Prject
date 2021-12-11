@@ -8,13 +8,6 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
  
-/*
-* The students class will get the data of the students using jsonParser 
-* to read the files. The Try catch method is used for filenotfound exception.
-* @author Amoon, Caleb, Matt, Brett
-* @version 12.4
-* @since 2021
-*/
 
        
 public class Students
@@ -33,7 +26,7 @@ public class Students
             JSONArray studentList = (JSONArray) obj;
             System.out.println(studentList);
              
-            //Iterate over student array
+            //Iterate over employee array
             studentList.forEach( emp -> parseStudentObject( (JSONObject) emp ) );
  
         } catch (FileNotFoundException e) {

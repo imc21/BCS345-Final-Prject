@@ -1,18 +1,10 @@
 package com.mycompany.gui2;
 
+
 import java.io.FileWriter;
 import java.io.IOException;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-
-/*
-* The CreateJSON will create Json file consisting of 
-* the first, second, and the third coach names and the
-* corresponding contact infos.
-* @author Amoon, Caleb, Matt, Brett
-* @version 12.4
-* @since 2021
-*/
  
 public class CreateJSON
 {

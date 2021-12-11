@@ -9,17 +9,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
-
-/*
-* The second controller1 is needed to create the first and last name,
-* coach name, the user names and passwords, sigunup check and confirmation,
-* the game name, ramPNG and the scheduel input.
-* @author Amoon, Caleb, Matt, Brett
-* @version 12.4
-* @since 2021
-*/
 
 public class SecondaryController1 {
 
@@ -30,51 +22,18 @@ public class SecondaryController1 {
     @FXML
     private TextField createCoachName;
     @FXML
-    private TextField createUserName;
-    @FXML
-    private TextField createPassword;
-    @FXML
-    private TextField createPassword2;
-    @FXML
     private Button createAccountButton;
-    @FXML
-    private CheckBox signUpCheck1;
-    @FXML
-    private CheckBox signUpCheck2;
-    @FXML
-    private CheckBox signUpCheck3;
-    @FXML
-    private CheckBox signUpCheck4;
-    @FXML
-    private CheckBox signUpCheck5;
-    @FXML
-    private CheckBox signUpCheck6;
-    @FXML
-    private CheckBox signUpCheck7;
-    @FXML
-    private CheckBox signUpCheck8;
-    @FXML
-    private CheckBox signUpCheck9;
-    @FXML
-    private CheckBox signUpCheck10;
-    @FXML
-    private CheckBox signUpCheck11;
-    @FXML
-    private CheckBox signUpCheck12;
-    @FXML
-    private TextField signUpDayFieldCoach;
-    @FXML
-    private Button signUpConfirmButton;
     @FXML
     private TextField gameName;
     @FXML
     private ImageView ramPNG;
-    
     @FXML
-    private TextField scheduleInput;
+    private TextField createEmailUserName;
+    @FXML
+    private TextArea scheduleInput;
+    
    
 
-    @FXML
     private void switchToSecondary() throws IOException {
         App.setRoot("secondary");
     }
@@ -82,9 +41,19 @@ public class SecondaryController1 {
     @FXML
     private void writeToTxt(ActionEvent event) throws IOException {
         StringBuilder sb = new StringBuilder();
-        sb.append(createFirstName.getText().toString()+ " " 
-                + createLastName.getText().toString() + "\n");
-        
+        sb.append(gameName.getText().toString()+ "\n");
+        sb.append("Player: " + createFirstName.getText().toString()+ " " + 
+                  createLastName.getText().toString()+ "\n");
+        sb.append("Coach: " +createCoachName.getText().toString()+ "\n");
+        sb.append(createEmailUserName.getText().toString()+ "\n");
+        sb.append(scheduleInput.getText().toString()+ "\n");
+        sb.append("Practices will be Monday, Wednesday, "
+                + "and Thursday from 5-9pm,"
+                + "\n" + "and Tuesdays and Fridays from 3-8pm. "
+                +"\n"
+                + "Contact your coach if you have trouble making these times" + "\n");
+        sb.append("\n");
+       
         
         File file =new File("./src/main/java/Data/login.txt");
         FileWriter W = new FileWriter(file,true);
@@ -94,20 +63,6 @@ public class SecondaryController1 {
         W.close();
         
         //Platform.exit();//closes window
-    }
-    
-    private void writeSchedule(ActionEvent event) throws IOException {
-        StringBuilder sb = new StringBuilder();
-        sb.append(scheduleInput.getText().toString() + "\n");
-        File userSchedules = new File("./src/main/java/Data/Schedules.txt");
-        FileWriter w = new FileWriter(userSchedules, true);
-        Scanner S = new Scanner(userSchedules);
-        
-        w.write(sb.toString());
-        w.close();
-        
-        
-       
     }
 
 
