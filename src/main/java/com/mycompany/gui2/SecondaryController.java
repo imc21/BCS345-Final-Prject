@@ -10,8 +10,18 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 
-public class SecondaryController {
+/*
+* The second controller is needed to add the calendar data labels such as 
+* weekTitle, timeDisplay, dayTitle, and selectDayTitle.
+* RosterDisplay, Datepicker, and editchecks are also added
+* @author Amoon, Caleb, Matt, Brett
+* @version 12.4
+* @since 2021
+*/
 
+public class SecondaryController {
+    
+    // creating private labels
     @FXML
     private Label weekTitle;
     @FXML
