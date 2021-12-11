@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="627.0" prefWidth="1276.0" style="-fx-background-color: BEIGE;" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.gui2.SecondaryController">
+  <tabs>
+    <Tab text="Home">
+      <content>
+        <AnchorPane>
+               <children>
+                  <BorderPane prefHeight="442.0" prefWidth="753.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <right>
+                        <AnchorPane BorderPane.alignment="CENTER">
+                           <children>
+                              <TableView prefHeight="372.0" prefWidth="221.0">
+                                <columns>
+                                  <TableColumn fx:id="rosterDisplay" prefWidth="199.0" text="Team Roster" />
+                                </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                              <ImageView fx:id="Img1" fitHeight="217.0" fitWidth="289.0" layoutX="2.0" layoutY="381.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="file:/E:/BCS%20345/Codes%20for%20BCS%20345/GUI2/src/main/java/Images/FSC_Logo_1.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </right>
+                     <center>
+                        <AnchorPane BorderPane.alignment="CENTER" />
+                     </center>
+                  </BorderPane>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Week View">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <BorderPane prefHeight="371.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <center>
+                        <TableView prefHeight="200.0" BorderPane.alignment="CENTER">
+                          <columns>
+                              <TableColumn prefWidth="75.0" text="Player" />
+                            <TableColumn prefWidth="75.0" text="Monday" />
+                              <TableColumn prefWidth="75.0" text="Tuesday" />
+                              <TableColumn prefWidth="75.0" text="Wednesday" />
+                              <TableColumn prefWidth="75.0" text="Thursday" />
+                              <TableColumn prefWidth="75.0" text="Friday" />
+                            <TableColumn prefWidth="75.0" text="Saturday" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </center>
+                     <right>
+                        <VBox alignment="TOP_CENTER" prefHeight="573.0" prefWidth="151.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label fx:id="timeDisplay" alignment="CENTER" text="time" />
+                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="file:/E:/BCS%20345/Codes%20for%20BCS%20345/GUI2/src/main/java/Images/guy.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                     </right>
+                     <top>
+                        <Label fx:id="weekTitle" text="Week View: XX/XX - XX/XX " BorderPane.alignment="CENTER">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </top>
+                  </BorderPane>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Select Day">
+        <content>
+          <AnchorPane>
+               <children>
+                  <BorderPane prefHeight="494.0" prefWidth="895.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <top>
+                        <VBox alignment="CENTER" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label fx:id="selectDayTitle" text="Custom Day View: XX/XX/XXXX">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <HBox alignment="CENTER" prefHeight="35.0" prefWidth="753.0">
+                                 <children>
+                                    <DatePicker fx:id="selectDayDatePicker" onAction="#setCustomDayTable" promptText="Select Day" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </top>
+                     <center>
+                        <TableView prefHeight="551.0" prefWidth="1176.0" BorderPane.alignment="CENTER">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="Player" />
+                              <TableColumn prefWidth="85.5" text="9:00-10:00am" />
+                              <TableColumn prefWidth="109.5" text="10:00am-11:00am" />
+                              <TableColumn prefWidth="92.5" text="11:00-12:00pm" />
+                              <TableColumn prefWidth="87.5" text="12:00-1:00pm" />
+                              <TableColumn prefWidth="89.5" text="1:00-2:00pm" />
+                              <TableColumn prefWidth="124.5" text="2:00-3:00pm" />
+                              <TableColumn prefWidth="75.5" text="3:00-4:00pm" />
+                              <TableColumn minWidth="0.0" prefWidth="75.5" text="4:00-5:00pm" />
+                              <TableColumn prefWidth="79.0" text="6:00-7:00pm" />
+                              <TableColumn prefWidth="78.5" text="7:00-8:00pm" />
+                              <TableColumn prefWidth="75.5" text="8:00-9:00pm" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </center>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Edit Schedule">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="598.0" prefWidth="1276.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" spacing="20.0">
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <Label text="Edit Schedule">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <HBox alignment="CENTER" prefHeight="16.0" prefWidth="736.0" spacing="20.0">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <Label text="Day Of The week" />
+                                       </children>
+                                    </VBox>
+                                    <DatePicker />
+                                 </children>
+                              </HBox>
+                              <Label text="Select all time slots that you are available for" />
+                              <HBox alignment="CENTER" prefHeight="8.0" prefWidth="736.0" spacing="20.0">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <Label text="9:00-10:00am" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <CheckBox fx:id="editCheck1" mnemonicParsing="false" text="Im Available" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <Label text="10:00-11:00am" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <CheckBox fx:id="editCheck2" mnemonicParsing="false" text="Im Available" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="8.0" prefWidth="736.0" spacing="20.0">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <Label text="11:00-12:00Pm" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <CheckBox fx:id="editCheck3" mnemonicParsing="false" text="Im Available" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <Label text="12:00-1:00pm" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <CheckBox fx:id="editCheck4" mnemonicParsing="false" text="Im Available" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="8.0" prefWidth="736.0" spacing="20.0">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <Label text="1:00-2:00pm" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <CheckBox fx:id="editCheck5" mnemonicParsing="false" text="Im Available" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <Label text="2:00-3:00pm" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <CheckBox fx:id="editCheck6" mnemonicParsing="false" text="Im Available" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="8.0" prefWidth="736.0" spacing="20.0">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <Label text="3:00-4:00pm" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <CheckBox fx:id="editCheck7" mnemonicParsing="false" text="Im Available" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <Label text="4:00-5:00pm" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <CheckBox fx:id="editCheck8" mnemonicParsing="false" text="Im Available" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="8.0" prefWidth="736.0" spacing="20.0">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <Label text="5:00-6:00pm" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <CheckBox fx:id="editCheck9" mnemonicParsing="false" text="Im Available" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <Label text="6:00-7:00pm" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <CheckBox fx:id="editCheck10" mnemonicParsing="false" text="Im Available" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="8.0" prefWidth="736.0" spacing="20.0">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <Label text="7:00-8:00pm" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <CheckBox fx:id="editCheck11" mnemonicParsing="false" text="Im Available" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <Label text="8:00-9:00pm" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <CheckBox fx:id="editCheck12" mnemonicParsing="false" text="Im Available" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <Button fx:id="editScheduleButton" mnemonicParsing="false" onAction="#editSchedule" text="Submit Changes" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children></AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="About">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <HBox prefHeight="598.0" prefWidth="1276.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label text="Game Time Verson 1.0">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="file:/E:/BCS%20345/Codes%20for%20BCS%20345/GUI2/src/main/java/Images/club.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Created By">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font></Label>
+                              <Label text="Caleb" />
+                              <Label text="Amoon" />
+                              <Label text="Matthew" />
+                              <Label text="Brett Gugel" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label text="Contact us at: NotARealEmail@Gmail.com" />
+                              <Label text="we appreciate any and all feedback, " />
+                              <Label text="make sure to let us know of any bugs you find along the way." />
+                              <Label text="Happy Planning with Game Time" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children></AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Day View">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="387.0" prefWidth="703.0">
+               <children>
+                  <BorderPane prefHeight="442.0" prefWidth="753.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <top>
+                        <Label fx:id="dayTitle" text="Day View: XX/XX/XXXX" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </top>
+                     <center>
+                        <TableView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="Player" />
+                              <TableColumn prefWidth="85.5" text="9:00-10:00am" />
+                              <TableColumn prefWidth="106.0" text="10:00am-11:00am" />
+                              <TableColumn prefWidth="94.0" text="11:00-12:00pm" />
+                              <TableColumn prefWidth="83.0" text="12:00-1:00pm" />
+                              <TableColumn prefWidth="77.0" text="1:00-2:00pm" />
+                              <TableColumn prefWidth="82.0" text="2:00-3:00pm" />
+                              <TableColumn prefWidth="75.5" text="3:00-4:00pm" />
+                              <TableColumn minWidth="0.0" prefWidth="75.5" text="4:00-5:00pm" />
+                              <TableColumn prefWidth="79.0" text="6:00-7:00pm" />
+                              <TableColumn prefWidth="78.5" text="7:00-8:00pm" />
+                              <TableColumn prefWidth="75.5" text="8:00-9:00pm" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </center>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Contact Coach">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0">
+               <children>
+                  <VBox prefHeight="602.0" prefWidth="1148.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <VBox alignment="TOP_CENTER" prefHeight="483.0" prefWidth="834.0" spacing="20.0">
+                                 <padding>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </padding>
+                                 <children>
+                                    <Label text="Contact Coach">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox alignment="CENTER" prefHeight="16.0" prefWidth="736.0" spacing="40.0">
+                                       <children>
+                                          <VBox prefHeight="200.0">
+                                             <children>
+                                                <Label prefHeight="17.0" text="Your Coaches Email" />
+                                             </children>
+                                          </VBox>
+                                          <TextField />
+                                       </children>
+                                    </HBox>
+                                    <Label text="Enter Your message" />
+                                    <TextArea prefHeight="200.0" prefWidth="200.0" />
+                                    <Button mnemonicParsing="false" text="Email Coach" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>
